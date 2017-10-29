@@ -1,0 +1,72 @@
+NAME
+
+       reconf_cache - Controls the reconfigurable cache table
+
+SYNOPSIS
+
+       reconf_cache [OPTION]... [FILE]...
+
+DESCRIPTION
+
+       Controls and configures the information in the reconfigurable.
+       cache table inside the linux kernel.
+
+       -e, enables the operating system support for reconfigurable cache.
+       
+       -d, disables the operating system support for reconfigurable cache.
+       
+       -c [File Name], configures a new entry in reconfigurable cache
+                       table with the information inside the file.
+
+       -r [Application Name], removes an entry in the reconfigurable
+                              cache table which matches the application
+                              name.
+                              
+       -p, prints the application reconfigurable cache table.
+       
+       -x, delete all the entries in the reconfigurable cache table.
+       
+       -h, display all the command options.
+
+EXAMPLES
+       
+       To add an entry
+       reconf_cache -c [file name]
+       example: reconf_cache -c queens.conf
+       
+       To remove an entry
+       reconf_cache -r [application name]
+       example: reconf_cache -d queens
+       
+       To remove all the enrties in the table
+       reconf_cache -x
+       
+       To print the whole table
+       reconf_cache -p
+       
+       To enable operating system support for reconfigurable cache
+       reconf_cache -e
+       
+       To disable operating system support for reconfigurable cache
+       reconf_cache -d
+       
+AUTHOR
+
+       Written by Vignesh Makeswaran.
+
+REPORTING BUGS
+
+       Report bugs to <vigneshmakeswaran@gmail.com>.
+
+COPYRIGHT
+
+       Copyright © 2015 University of Paderborn, Germany.
+       This  is  software for Master thesis.
+
+SEE ALSO
+
+       The  full  documentation for the usage of this application 
+       with examples is described in the "Operating System support
+       for Reconfigurable Cache" Master thesis report of Vignesh 
+       Makeswaran, Department of Computer Science, 2015, 
+       University of Paderborn.
